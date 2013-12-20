@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--Dice Roller View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="DiceRollerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GgH-De-eEr"/>
+                        <viewControllerLayoutGuide type="bottom" id="KVh-GI-aBo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdR-7T-W6M" customClass="DiceView">
+                                <rect key="frame" x="20" y="166" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="4lt-EH-z8h"/>
+                                    <constraint firstAttribute="width" constant="100" id="T9q-Rf-UmA"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QeT-SS-Ojn" customClass="DiceView">
+                                <rect key="frame" x="200" y="166" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="sDv-uO-MVm"/>
+                                    <constraint firstAttribute="width" constant="100" id="xlr-Xm-nNt"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click or Shake to Roll" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8I9-7l-ze1">
+                                <rect key="frame" x="34" y="26" width="253" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="253" id="MbV-Hd-3Gw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.24033666111797669" blue="0.074860723933662388" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVF-NQ-znY">
+                                <rect key="frame" x="34" y="318" width="253" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="NcB-sp-Mql"/>
+                                    <constraint firstAttribute="width" constant="253" id="nLz-88-XW7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.24033666109999999" blue="0.074860723929999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezL-XE-mO2">
+                                <rect key="frame" x="108" y="391" width="105" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.29592623533389306" blue="0.070504530058561832" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="contentStretch" x="0.49999999999999994" y="0.49999999999999994" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="Nj5-jj-MEp"/>
+                                    <constraint firstAttribute="width" constant="105" id="ema-Ol-ceG"/>
+                                </constraints>
+                                <state key="normal" title="ROLL">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rollClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gcq-Be-jFI"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BiJ-cv-cEn">
+                                <rect key="frame" x="-6" y="452" width="332" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="332" id="ahc-BD-uLd"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="6 Sided"/>
+                                    <segment title="20 Sided"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="0.24033666109999999" blue="0.074860723929999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeDice:" destination="vXZ-lx-hvc" eventType="valueChanged" id="ebl-wn-eJL"/>
+                                </connections>
+                            </segmentedControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice20.png" translatesAutoresizingMaskIntoConstraints="NO" id="u4W-iJ-Fi0">
+                                <rect key="frame" x="81" y="108" width="158" height="158"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="158" id="mPf-qf-dZC"/>
+                                    <constraint firstAttribute="height" constant="158" id="vh8-GG-WOp"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4c6-nS-koC">
+                                <rect key="frame" x="143" y="170" width="34" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="34" id="Gfc-Va-SSb"/>
+                                    <constraint firstAttribute="height" constant="34" id="iNM-GR-JFl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.24033666109999999" blue="0.074860723929999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="u4W-iJ-Fi0" firstAttribute="centerY" secondItem="4c6-nS-koC" secondAttribute="centerY" id="1Km-ke-Fmv"/>
+                            <constraint firstItem="4c6-nS-koC" firstAttribute="top" secondItem="u4W-iJ-Fi0" secondAttribute="bottom" constant="-96" id="1qb-hp-JgR"/>
+                            <constraint firstItem="4c6-nS-koC" firstAttribute="leading" secondItem="u4W-iJ-Fi0" secondAttribute="trailing" constant="-96" id="8X9-Yi-qSu"/>
+                            <constraint firstItem="8I9-7l-ze1" firstAttribute="top" secondItem="GgH-De-eEr" secondAttribute="bottom" constant="6" id="FfU-1F-VIW"/>
+                            <constraint firstItem="8I9-7l-ze1" firstAttribute="centerX" secondItem="kdR-7T-W6M" secondAttribute="centerX" constant="90.5" id="JeH-90-sKe"/>
+                            <constraint firstItem="u4W-iJ-Fi0" firstAttribute="top" secondItem="8I9-7l-ze1" secondAttribute="bottom" constant="61" id="Ka5-jD-NGb"/>
+                            <constraint firstItem="KVh-GI-aBo" firstAttribute="top" secondItem="BiJ-cv-cEn" secondAttribute="bottom" id="LOG-Qg-fkH"/>
+                            <constraint firstItem="u4W-iJ-Fi0" firstAttribute="centerX" secondItem="4c6-nS-koC" secondAttribute="centerX" id="WXG-5m-cdj"/>
+                            <constraint firstAttribute="centerX" secondItem="BiJ-cv-cEn" secondAttribute="centerX" id="Y7m-oU-CcL"/>
+                            <constraint firstAttribute="centerX" secondItem="8I9-7l-ze1" secondAttribute="centerX" constant="-0.5" id="Yjv-ca-BnT"/>
+                            <constraint firstAttribute="centerY" secondItem="8I9-7l-ze1" secondAttribute="centerY" constant="203.5" id="aS3-Na-fgF"/>
+                            <constraint firstItem="QeT-SS-Ojn" firstAttribute="leading" secondItem="kdR-7T-W6M" secondAttribute="trailing" constant="80" id="cwn-ru-EML"/>
+                            <constraint firstAttribute="centerX" secondItem="u4W-iJ-Fi0" secondAttribute="centerX" id="dyo-7L-Zyk"/>
+                            <constraint firstItem="KVh-GI-aBo" firstAttribute="top" secondItem="ezL-XE-mO2" secondAttribute="bottom" constant="56" id="lDk-go-0GV"/>
+                            <constraint firstItem="kdR-7T-W6M" firstAttribute="top" secondItem="8I9-7l-ze1" secondAttribute="bottom" constant="119" id="liV-WL-YH6"/>
+                            <constraint firstAttribute="centerX" secondItem="ezL-XE-mO2" secondAttribute="centerX" constant="-0.5" id="nbS-AD-Sex"/>
+                            <constraint firstItem="QeT-SS-Ojn" firstAttribute="top" secondItem="8I9-7l-ze1" secondAttribute="bottom" constant="119" id="oF4-gE-6QE"/>
+                            <constraint firstItem="zVF-NQ-znY" firstAttribute="centerX" secondItem="ezL-XE-mO2" secondAttribute="centerX" id="oaX-gv-Vmj"/>
+                            <constraint firstItem="QeT-SS-Ojn" firstAttribute="centerX" secondItem="8I9-7l-ze1" secondAttribute="centerX" constant="89.5" id="sNE-Zf-EWP"/>
+                            <constraint firstItem="zVF-NQ-znY" firstAttribute="top" secondItem="QeT-SS-Ojn" secondAttribute="bottom" constant="52" id="urR-Ay-oWe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Label" destination="8I9-7l-ze1" id="SPn-m7-ccm"/>
+                        <outlet property="RollButton" destination="ezL-XE-mO2" id="Aui-Pp-0Uz"/>
+                        <outlet property="doubles" destination="zVF-NQ-znY" id="iwI-n3-tuP"/>
+                        <outlet property="firstDiceView" destination="QeT-SS-Ojn" id="NYO-Rh-Uus"/>
+                        <outlet property="secondDiceView" destination="kdR-7T-W6M" id="bvb-wD-hfB"/>
+                        <outlet property="twentyLabel" destination="4c6-nS-koC" id="XHW-fA-2lD"/>
+                        <outlet property="twentySided" destination="u4W-iJ-Fi0" id="yGX-gc-cV6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="706" y="81"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dice20.png" width="500" height="500"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
